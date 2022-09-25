@@ -28,6 +28,6 @@ public class PersonService {
     }
 
     public List<Person> findAll() {
-        return (List<Person>) personRepository.findAll();
+        return personRepository.findAll();
     }
 }
