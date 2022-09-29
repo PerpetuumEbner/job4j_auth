@@ -22,8 +22,8 @@ public class PersonController {
     }
 
     @GetMapping("/all")
-    public List<Person> findAll() {
-        return this.personService.findAll();
+    public ResponseEntity<List<Person>> findAll() {
+        return new ResponseEntity<>(personService.findAll(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
