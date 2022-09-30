@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @NoArgsConstructor
@@ -22,6 +23,10 @@ public class Person {
     private String username;
 
     private String password;
+
+    private LocalDateTime creation;
+
+    private boolean enabled;
 
     @Override
     public boolean equals(Object o) {
